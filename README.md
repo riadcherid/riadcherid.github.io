@@ -1,5 +1,5 @@
 
-<!DOCTYPE html>
+
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
@@ -63,7 +63,7 @@
   <header class="header">
     <h1>Mon Site Web Personnel</h1>
     <img src="myimage1.jpg" alt="smile to life, the life will smile to you" width="200" height="200" class="profile-img">  </header>
-  </header>
+
 
   <section class="section">
     <h2 class="section-title">À propos de moi</h2>
