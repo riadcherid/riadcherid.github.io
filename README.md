@@ -40,16 +40,7 @@
       </div>
     </section>
   </main>
-  
-  <!-- Section de contact -->
-  <section class="section contact-section">
-    <h2 class="section-title">Contact</h2>
-    <div class="contact-info">
-      <p><strong>Téléphone :</strong> 438-304-3132</p>
-      <p><strong>Adresse :</strong> 545 Sherbourne St</p>
-      <p><strong>Email :</strong> <a href="mailto:riad.cherid@gmail.com">riad.cherid@gmail.com</a></p>
-    </div>
-  </section>
+
   
   <footer>
     <p>Ceci est la page d'accueil de mon site personnel.</p>
