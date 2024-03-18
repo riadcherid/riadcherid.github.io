@@ -4,3 +4,38 @@ body {
   color: black;
   text-align: center;
 }
+/* Style.css */
+/* Assuming that you want the navigation bar to be fixed at the top with an orange background as seen in the screenshot */
+nav {
+  background-color: orange;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav ul li {
+  float: left;
+}
+
+nav ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Other styles for header, main content and footer */
+.header {
+  padding-top: 50px; /* Add padding to account for the fixed navbar */
+}
+
+/* Rest of your styles */
