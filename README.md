@@ -18,7 +18,7 @@
   </nav>
 
   <header class="header">
-    <h1 Network and Systems Engineer<</h1>
+    <h1 Network and Systems Engineer /h1>
     <img src="myimage1.jpg" width="200" height="150">
   </header>
 
