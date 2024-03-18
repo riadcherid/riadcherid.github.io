@@ -20,7 +20,7 @@
   <header class="header">
     <h1>Mon Site Web Personnel</h1>
     <p>Technicien informatique | Réseau et Systèmes | Support Client</p>
-    <img src="myimage1.jpg" width="200" height="150">
+    <img src="myimage1.jpg" style="object-fit: contain">
   </header>
 
   <main>
