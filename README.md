@@ -15,7 +15,7 @@
   
   <nav>
     <ul>
-      <li><a href="README.md">Accueil</a></li>
+      <li><a href="index.html">Accueil</a></li>
       <li><a href="projects.html">Projets</a></li>
       <li><a href="resume.html">CV</a></li>
       <li><a href="contact.html">Contact</a></li>
