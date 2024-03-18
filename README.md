@@ -13,7 +13,7 @@
   <header class="header">
     <h1>Mon Site Web Personnel</h1>
     <p>Technicien informatique | Réseau et Systèmes | Support Client</p>
-    <img src="myimage1.jpg" alt="smile to life, the life will smile to you" class="profile-img">
+<img src="myimage1.jpg" alt="smile to life, the life will smile to you" class="profile-img">
   </header>
   
   <!-- Barre de navigation -->
@@ -26,7 +26,6 @@
     </ul>
   </nav>
   
-  <main>
     <section class="section">
       <h2 class="section-title">À propos de moi</h2>
       <p>Technicien informatique bilingue avec une expertise en réseau, Active Directory, dépannage, Linux, Azure et support client.</p>
