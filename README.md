@@ -18,8 +18,7 @@
 
   <header class="header">
    <h1>Network and Systems Engineer</h1> 
-    <img src="myimage1.jpg" width="200" height="150">
-  </header>
+<img src="myimage1.jpg" alt="Describe your image" style="width: 220px; height: 170px; border-radius: 10px;">  </header>
 
   <main>
     <section class="about-me">
