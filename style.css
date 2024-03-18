@@ -4,3 +4,9 @@ body {
     color: white;
     text-align: center;
   }
+.profile-img {
+  width: 150px; /* ou la largeur que vous voulez */
+  height: auto; /* pour maintenir le ratio d'aspect de l'image */
+  border-radius: 50%; /* optionnel: pour rendre l'image circulaire */
+  /* autres styles que vous souhaitez appliquer, comme border, shadow, etc. */
+}
