@@ -13,12 +13,13 @@
     <img src="myimage1.jpg" alt="smile to life, the life will smile to you" class="profile-img">
   </header>
   
+  <!-- Barre de navigation -->
   <nav>
     <ul>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="projects.html">Projets</a></li>
-      <li><a href="resume.html">CV</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html" id="home-link">Accueil</a></li>
+      <li><a href="projects.html" id="projects-link">Projets</a></li>
+      <li><a href="resume.html" id="resume-link">CV</a></li>
+      <li><a href="contact.html" id="contact-link">Contact</a></li>
     </ul>
   </nav>
   
@@ -37,7 +38,8 @@
     </section>
   </main>
   
-  <section class="section">
+  <!-- Section de contact -->
+  <section class="section contact-section">
     <h2 class="section-title">Contact</h2>
     <div class="contact-info">
       <p><strong>Téléphone :</strong> 438-304-3132</p>
@@ -65,6 +67,15 @@
             projectsList.appendChild(div);
           });
         });
+
+      // JavaScript pour activer le lien de navigation en cours
+      const currentLocation = window.location.pathname.split('/').pop();
+      const navLinks = document.querySelectorAll('nav ul li a');
+      navLinks.forEach(link => {
+        if(link.getAttribute('href') === currentLocation) {
+          link.className += ' active'; // Ajoute une classe 'active' au lien actuel
+        }
+      });
     });
   </script>
 </body>
