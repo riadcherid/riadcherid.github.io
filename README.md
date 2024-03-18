@@ -5,30 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mon Site Web Personnel</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    /* Réinitialisation des styles par défaut */
+    body, h1, h2, p {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      color: #333;
     }
+    /* Styles de base pour le corps du document */
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+      line-height: 1.6;
+      padding-bottom: 50px; /* Ajustement pour le footer */
+    }
+    /* En-tête du site */
     .header {
-      text-align: center;
       background-color: #f0f0f0;
       padding: 20px;
+      text-align: center;
     }
+    /* Image de profil */
     .profile-img {
+      width: 200px; /* Ajustement de la taille */
+      height: auto; /* Ajustement de la hauteur automatique pour conserver les proportions */
+      border-radius: 50%; /* Cercle parfait */
       display: block;
-      margin: 0 auto;
-      border-radius: 50%;
+      margin: 20px auto; /* Centrage de l'image */
     }
+    /* Section principale */
     .section {
       padding: 20px;
     }
+    /* Titres des sections */
     .section-title {
       color: #007bff;
-      margin: 0 0 10px;
+      margin: 20px 0;
+      text-align: center; /* Centrage du titre */
     }
+    /* Footer fixé en bas de la page */
     footer {
       background-color: #333;
       color: white;
@@ -43,7 +56,7 @@
 <body>
   <header class="header">
     <h1>Mon Site Web Personnel</h1>
-    <img src="myimage1.jpg" alt="smile to life, the life will smile to you" width="200" height="200" class="profile-img">
+    <img src="myimage1.jpg" alt="Mon portrait" class="profile-img"> <!-- Remplacer "your-image-link.jpg" par l'URL de votre image -->
   </header>
 
   <section class="section">
