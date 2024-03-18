@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -5,19 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mon Site Web Personnel</title>
   <style>
-    /* Réinitialisation des styles par défaut */
+    /* Styles réinitialisés et de base */
     body, h1, h2, p {
       margin: 0;
       padding: 0;
     }
-    /* Styles de base pour le corps du document */
     body {
       font-family: Arial, sans-serif;
       color: #333;
       line-height: 1.6;
-      padding-bottom: 50px; /* Ajustement pour le footer */
+      padding-bottom: 50px; /* Espace pour le footer */
     }
-    /* En-tête du site */
+    /* En-tête */
     .header {
       background-color: #f0f0f0;
       padding: 20px;
@@ -25,23 +25,29 @@
     }
     /* Image de profil */
     .profile-img {
-      width: 200px; /* Ajustement de la taille */
-      height: auto; /* Ajustement de la hauteur automatique pour conserver les proportions */
-      border-radius: 50%; /* Cercle parfait */
+      width: 200px;
+      height: auto;
+      border-radius: 50%;
       display: block;
-      margin: 20px auto; /* Centrage de l'image */
+      margin: 20px auto;
     }
-    /* Section principale */
+    /* Sections */
     .section {
       padding: 20px;
+      text-align: center; /* Texte centré pour toutes les sections */
     }
-    /* Titres des sections */
     .section-title {
       color: #007bff;
       margin: 20px 0;
-      text-align: center; /* Centrage du titre */
     }
-    /* Footer fixé en bas de la page */
+    /* Contact */
+    .contact-info {
+      background-color: #e9ecef;
+      border-radius: 5px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    /* Footer fixé en bas */
     footer {
       background-color: #333;
       color: white;
@@ -57,6 +63,7 @@
   <header class="header">
     <h1>Mon Site Web Personnel</h1>
     <img src="myimage1.jpg" alt="smile to life, the life will smile to you" width="200" height="200" class="profile-img">  </header>
+  </header>
 
   <section class="section">
     <h2 class="section-title">À propos de moi</h2>
@@ -64,8 +71,19 @@
     <p>Opérateur de systèmes de chronométrage électronique (Finish Lynx, MyLaps, Seltec).</p>
   </section>
 
+  <!-- Section Contact -->
+  <section class="section">
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-info">
+      <p><strong>Téléphone :</strong> 438-304-3132</p>
+      <p><strong>Adresse :</strong> 545 Sherbourne St</p>
+      <p><strong>Email :</strong> <a href="mailto:riad.cherid@gmail.com">riad.cherid@gmail.com</a></p>
+    </div>
+  </section>
+
   <footer>
     <p>Ceci est la page d'accueil de mon site personnel.</p>
   </footer>
 </body>
 </html>
+
