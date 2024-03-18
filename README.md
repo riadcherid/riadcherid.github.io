@@ -31,8 +31,5 @@
     </section>
   </main>
 
-  <footer>
-    <p>Ceci est la page d'accueil de mon site personnel.</p>
-  </footer>
 </body>
 </html>
