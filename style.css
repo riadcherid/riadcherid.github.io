@@ -1,12 +1,6 @@
 body {
-    font-family: system-ui;
-    background: #f06d06;
-    color: white;
-    text-align: center;
-  }
-profile-img {
-  width: 150px; /* ou la largeur que vous voulez */
-  height: auto; /* pour maintenir le ratio d'aspect de l'image */
-  border-radius: 50%; /* optionnel: pour rendre l'image circulaire */
-  /* autres styles que vous souhaitez appliquer, comme border, shadow, etc. */
+  font-family: system-ui;
+  background:white#f06d06;
+  color: black;
+  text-align: center;
 }
