@@ -18,8 +18,7 @@
   </nav>
 
   <header class="header">
-    <h1>Mon Site Web Personnel</h1>
-    <p>Technicien informatique | Réseau et Systèmes | Support Client</p>
+    <h1 Network and Systems Engineer<</h1>
     <img src="myimage1.jpg" width="200" height="150">
   </header>
 
