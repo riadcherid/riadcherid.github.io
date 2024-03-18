@@ -27,6 +27,8 @@
       <p>Opérateur de systèmes de chronométrage électronique (Finish Lynx, MyLaps, Seltec).</p>
     </section>
   </main>
-
+    <footer>
+    <p>Copyright &copy; 2023 - med riad cherid</p>
+  </footer>
 </body>
 </html>
