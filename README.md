@@ -7,6 +7,7 @@
   <h1>my personal website</h1>
   <h1>Bienvenue sur mon site Web!</h1>
   <p>Ceci est une page d'accueil de mon site personnel.</p>
-  <img src="myimage1.jpg" alt="smile to life, the life will smile to you">
+ <img src="myimage1.jpg" alt="smile to life, the life will smile to you" width="200" height="150">
+
 </body>
 </html>
