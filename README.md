@@ -56,8 +56,7 @@
 <body>
   <header class="header">
     <h1>Mon Site Web Personnel</h1>
-    <img src="myimage1.jpg" alt="Mon portrait" class="profile-img"> <!-- Remplacer "your-image-link.jpg" par l'URL de votre image -->
-  </header>
+    <img src="myimage1.jpg" alt="smile to life, the life will smile to you" width="200" height="200" class="profile-img">  </header>
 
   <section class="section">
     <h2 class="section-title">À propos de moi</h2>
