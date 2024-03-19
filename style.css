@@ -1,11 +1,13 @@
 body {
   font-family: system-ui;
-  background: white;
-  color: black;
+  background: #111; /* Dark background to match the screenshot */
+  color: white; /* White text for contrast */
   text-align: center;
+  margin: 0;
+  padding-top: 100px; /* Space for fixed navbar */
 }
-/* Style.css */
-/* Assuming that you want the navigation bar to be fixed at the top with an orange background as seen in the screenshot */
+
+/* Fixed navigation bar at the top */
 nav {
   background-color: black;
   width: 100%;
@@ -33,9 +35,36 @@ nav ul li a {
   text-decoration: none;
 }
 
-/* Other styles for header, main content and footer */
+/* Header styles, assuming this is your profile card */
 .header {
-  padding-top: 50px; /* Add padding to account for the fixed navbar */
+  background: #222; /* Dark card background */
+  margin: 0 auto;
+  max-width: 300px; /* Match the width of the card in the screenshot */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Add some shadow for depth */
+  margin-top: 100px; /* Push down from nav bar */
 }
 
-/* Rest of your styles */
+.header img {
+  width: 80%; /* Adjust based on your preference */
+  height: auto;
+  border-radius: 50%; /* Circle image */
+  margin-bottom: 20px; /* Space between image and text */
+}
+
+/* About me section styles */
+.about-me {
+  margin: 50px 0;
+}
+
+/* Footer styles */
+footer {
+  background-color: #222; /* To match the header card */
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
