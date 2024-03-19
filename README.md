@@ -1,34 +1,32 @@
-
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <title>Votre Nom - Ingénieur Réseaux et Systèmes</title>
 </head>
 <body>
-  <!-- Barre de navigation -->
-  <nav>
-    <ul>
-      <li><a href="index.html" id="home-link">Accueil</a></li>
-      <li><a href="projects.html" id="projects-link">Projets</a></li>
-      <li><a href="resume.html" id="resume-link">CV</a></li>
-      <li><a href="contact.html" id="contact-link">Contact</a></li>
-    </ul>
-  </nav>
+  <div class="container">
+    <!-- Profil Section -->
+    <section class="profile-section">
+      <img src="myimage1.jpg" alt="Network and Systems Engineer" class="profile-image">
+      <h1>Votre Nom</h1>
+      <p>Ingénieur Réseaux et Systèmes</p>
+      <a href="resume.html" class="btn-download-cv">Télécharger CV</a>
+    </section>
 
-  <header class="header">
-   <h1>Network and Systems Engineer</h1> 
-<img src="myimage1.jpg" alt="Describe your image" style="width: 2500px; height: 1200px; border-radius: 50px;">  </header>
-
-  <main>
+    <!-- À propos de moi -->
     <section class="about-me">
       <h2>À propos de moi</h2>
       <p>Technicien informatique bilingue avec une expertise en réseau, Active Directory, dépannage, Linux, Azure et support client.</p>
       <p>Opérateur de systèmes de chronométrage électronique (Finish Lynx, MyLaps, Seltec).</p>
     </section>
-  </main>
-    <footer>
-    <p>Copyright &copy; 2023 - med riad cherid</p>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>Copyright &copy; 2023 - Votre Nom</p>
   </footer>
 </body>
 </html>
