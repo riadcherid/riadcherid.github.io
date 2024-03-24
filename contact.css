@@ -82,14 +82,7 @@ nav {
     font-size: 20px;
     font-weight: bold;
     text-align: center;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.5);
-    transition: 0.3s;
-    cursor: pointer;
-    position: relative;
-    z-index: 1;
-    color: white;
-    text-decoration: r
+    
   }
   
   nav ul li a {
