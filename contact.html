@@ -17,6 +17,28 @@
 <title>Contactez-nous</title>
 </head>
 <body>
+  <section id="contact">
+    <div class="container">
+        <h2>Contact Me</h2>
+        <p>If you're interested in working together or just want to say hello, feel free to get in touch!</p>
+        <form action="send-message.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="social-media">
+            <a href="your-linkedin-profile" target="_blank">LinkedIn</a>
+            <a href="your-twitter-profile" target="_blank">Twitter</a>
+            <a href="your-github-profile" target="_blank">GitHub</a>
+            <!-- Additional social media links can be added here -->
+        </div>
+    </div>
+</section>
+
 <section class="contact-form">
     <!-- Début du formulaire Google Forms intégré -->
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe0PORZ8o7EwR1J_50sjWt4X9lBxrI86N42Q4SvMtPe6qHfvg/viewform?embedded=true" width="640" height="645" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
