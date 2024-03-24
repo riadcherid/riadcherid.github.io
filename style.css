@@ -4,8 +4,10 @@ body {
   color: black;
   text-align: center;
 }
-/* Style.css */
-/* Assuming that you want the navigation bar to be fixed at the top with an orange background as seen in the screenshot */
+  
+h1, h2, h3, h4, h5, h6 {
+  font-family: system-ui;
+}
 nav {
   background-color: black;
   width: 100%;
@@ -32,10 +34,3 @@ nav ul li a {
   padding: 14px 16px;
   text-decoration: none;
 }
-
-/* Other styles for header, main content and footer */
-.header {
-  padding-top: 50px; /* Add padding to account for the fixed navbar */
-}
-
-/* Rest of your styles */
