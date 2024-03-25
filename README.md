@@ -15,9 +15,11 @@
       </ul>
     </nav>
 
-  <header class="header">
-   <h1>Network and Systems Engineer</h1> 
-<img src="myimage1.jpg" alt="Describe your image" style="width: 2500px; height: 1200px; border-radius: 50px;">  </header>
+ <header class="header">
+  <h1>Network and Systems Engineer</h1> 
+  <img src="myimage1.jpg" alt="Professional headshot of Mohamed Riad Cherid">
+</header>
+
 
   <main>
     <section class="about-me">
