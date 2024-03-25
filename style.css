@@ -3,11 +3,14 @@ body {
   background: white;
   color: black;
   text-align: center;
+  margin: 0; /* Ajouté pour éliminer la marge par défaut autour de la page */
+  padding-top: 50px; /* Ajouté pour éviter que le contenu soit caché derrière la barre de navigation fixe */
 }
   
 h1, h2, h3, h4, h5, h6 {
   font-family: system-ui;
 }
+
 nav {
   background-color: black;
   width: 100%;
@@ -18,19 +21,29 @@ nav {
 
 nav ul {
   list-style-type: none;
-  margin: 0;
   padding: 0;
-  overflow: hidden;
+  margin: 0;
+  display: flex; /* Changé de 'overflow: hidden' pour utiliser flexbox */
+  justify-content: center; /* Centre les éléments de la liste horizontalement */
+  align-items: center; /* Centre les éléments de la liste verticalement */
 }
 
 nav ul li {
-  float: left;
+  /* 'float: left;' est retiré car nous utilisons flexbox maintenant */
 }
 
 nav ul li a {
   display: block;
   color: white;
-  text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+
+/* Ajouter un padding-bottom au footer pour s'assurer que le contenu ne soit pas caché derrière */
+footer {
+  padding-bottom: 50px;
 }
