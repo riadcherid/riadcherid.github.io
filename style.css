@@ -3,7 +3,7 @@ body {
   background: white;
   color: black;
   text-align: center;
-  margin: 0; /* Ajouté pour éliminer la marge par défaut autour de la page */
+  margin: 10; /* Ajouté pour éliminer la marge par défaut autour de la page */
   padding-top: 50px; /* Ajouté pour éviter que le contenu soit caché derrière la barre de navigation fixe */
 }
   
