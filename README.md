@@ -12,6 +12,7 @@
         <li><a href="projects.html" id="projects-link">Projets</a></li>
         <li><a href="resume.html" id="resume-link">CV</a></li>
         <li><a href="contact.html" id="contact-link">Contact</a></li>
+        <li><a href="resultats.html" id="cresultats-link">results</a></li>
       </ul>
     </nav>
 
