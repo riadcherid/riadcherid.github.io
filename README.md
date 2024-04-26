@@ -12,7 +12,6 @@
         <li><a href="projects.html" id="projects-link">Projets</a></li>
         <li><a href="resume.html" id="resume-link">CV</a></li>
         <li><a href="contact.html" id="contact-link">Contact</a></li>
-        <li><a href="resultats.html" id="cresultats-link">results</a></li>
       </ul>
     </nav>
 
@@ -25,12 +24,12 @@
   <main>
     <section class="about-me">
       <h2>À propos de moi</h2>
-      <p>Technicien informatique bilingue avec une expertise en réseau, Active Directory, dépannage, Linux, Azure et support client.</p>
+      <h3>bilingual professional in computer systems technology, focusing on IT infrastructure, database management, network/system administration, and Azure cloud services. Skilled in problem-solving, managing dynamic environments, and proficient in multiple tech platforms and programming languages, delivering efficient, detailed, and team-oriented IT solutions.</h3>
       <p>Opérateur de systèmes de chronométrage électronique (Finish Lynx, MyLaps, Seltec).</p>
     </section>
   </main>
     <footer>
-    <p>Copyright &copy; 2023 - med riad cherid</p>
+    <p>Copyright &copy; 2024 - med riad cherid</p>
   </footer>
 </body>
 </html>
