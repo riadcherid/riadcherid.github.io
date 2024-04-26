@@ -66,4 +66,181 @@
       </div>
   </body>
   </html>
-  
+  <html>
+<head>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
+</head>
+<body>
+    <style>
+        body {
+        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+        background-color:#98002e;
+        color:#555;
+        }
+        
+        #container{
+            width:800px;
+            margin: auto;
+            background-color:#fff;
+            padding:10px
+        }
+        
+        h3{
+            color:#98002e;
+            padding:0;
+            margin:0;
+        }
+        h4{
+            text-transform:uppercase;
+            padding:0;
+            margin:0 0 10px 0;
+            color:#afa081;
+            font-weight:normal;
+            
+        }
+        h5{
+            font-weight:normal;
+            padding:2px;
+            margin:10px 0;
+            border-top: 1px solid #afa081;
+            border-bottom: 1px solid #afa081;
+            font-size:10px;
+
+        }
+        h5 span{
+            margin: 0 40px 0 0;
+        }
+        table{
+            border-collapse:collapse;
+            width:100%
+        }
+        
+        th{
+            border-bottom:2px solid #afa081;
+            text-align:left;
+            font-size:12px;
+        }
+        
+        td{
+            border-bottom:1px solid #afa081;;
+            margin:0;
+            padding:4px 4px;
+            font-size:14px;
+        }
+        .place, .lane, .number, .laps{
+            text-align:center
+        }
+        
+        .time, .delta, .cum, .last{
+            text-align:right;
+        }
+        #clock{
+            float:right;
+            background-color:#ffd700;
+            font-size: 30px;
+            font-weight:bold;
+            font-family: "courier new";
+            text-align:center;
+            color: #000000;
+            padding: 5px 5px 3px 5px;
+            width:150px;
+        }
+    </style>
+    
+    <script>
+        var socket = io.connect();
+
+        socket.on('message', function(message){        
+            var obj = jQuery.parseJSON(message);
+            var htmlStr =''; 
+            
+            
+            // update page with event name
+            var eventName = obj[1][1];
+            $('#eventName').text(eventName);
+
+            // update page with wind
+            var wind = obj[1][2];
+            $('#wind').text("Wind: " + wind);
+            
+            // update page with event number
+            var event = obj[1][3];
+            $('#event').text("Event: " + event);
+            
+            // update page with round number
+            var round = obj[1][4];
+            $('#round').text("Round: " + round);
+            
+            // update page with heat number
+            var heat = obj[1][5];
+            $('#heat').text("Heat: " + heat);
+            
+            // update page with participants
+            var participants = obj[1][8];
+            $('#participants').text("Participants: " + participants);
+            
+            // determine number of results to display upto 24
+            var displayNum = 24;
+            if(participants<24){
+                displayNum = participants;
+                displayNum++;
+            }
+            
+            //update clock
+            var clock = obj[0];
+            $('#clock').text(clock);
+            
+            // start building html for results table
+            htmlStr = htmlStr + '<table id="results">';
+            
+            // results table header
+            htmlStr = htmlStr + '<tr>'+
+                '<th class="place">Place</th>'+
+                '<th class="lane">Hip</th>'+
+                '<th class="number">#</th>'+
+                '<th class="name">Name</th>'+
+                '<th class="team">Team</th>'+
+                '<th class="time">Final</th>'+
+                '<th class="delta">Delta</th>'+
+                '<th class="cum">Cum</th>'+
+                '<th class="last">Last</th>'+
+                '<th class="laps">Laps</th></tr>';
+                     
+            for(var i=2;i<=displayNum;i++){ 
+                htmlStr = htmlStr + "<tr>";                
+                    htmlStr = htmlStr + '<td class="place">' + obj[i][0] + "</td>";
+                    htmlStr = htmlStr + '<td class="lane">' + obj[i][1] + "</td>";
+                    htmlStr = htmlStr + '<td class="number">' + obj[i][2] + "</td>";
+                    htmlStr = htmlStr + '<td class="name">' + obj[i][3] + "</td>";
+                    htmlStr = htmlStr + '<td class="team">' + obj[i][4] + "</td>";
+                    htmlStr = htmlStr + '<td class="time">' + obj[i][5] + "</td>";
+                    htmlStr = htmlStr + '<td class="delta">' + obj[i][6] + "</td>";
+                    htmlStr = htmlStr + '<td class="cum">' + obj[i][7] + "</td>";
+                    htmlStr = htmlStr + '<td class="last">' + obj[i][8] + "</td>";
+                    htmlStr = htmlStr + '<td class="laps">' + obj[i][9] + "</td>";
+                htmlStr = htmlStr + "</tr>";     
+            }
+            htmlStr = htmlStr + '<table>';
+            
+            // update page with generated table
+            $('#results').html(htmlStr);
+        });
+    </script>
+    <div id="container">
+        <div id="clock">00:00.00</div>
+        <h4 id="venue"> toronto | toronto University | on, canada</h4>
+        <h3 id="eventName">No Event Selected</h3>
+        <h5 id="details">
+            <span id="event">Event: 0</span>
+            <span id="round">Round: 0</span>
+            <span id="heat">Heat: 0</span>
+            <span id="wind"></span>
+            <span id="participants">Participants: 0</span>
+        </h5>
+        
+        <div id="results"></div>
+        <div id="test"></div>
+    </div>
+</body>
+</html>
