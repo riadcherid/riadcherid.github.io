@@ -2,16 +2,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // Example of form validation
     const form = document.querySelector('.contact-form form');
     const emailInput = document.querySelector('input[type="email"]');
-
     function validateEmail() {
         const emailValue = emailInput.value;
-        if (!emailValue || !/^\S+@\S+\.\S+$/.test(emailValue)) {
-            alert('Please enter a valid email address.');
+        const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        if (!emailValue || !regex.test(emailValue)) {
+            emailInput.nextElementSibling.innerText = 'Please enter a valid email address.';
             return false;
         }
+        emailInput.nextElementSibling.innerText = ''; // Clear error message
         return true;
     }
-
+    
     if (form) {
         form.addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent the form from submitting
