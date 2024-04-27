@@ -28,8 +28,8 @@
             <p>Bilingual professional in computer systems technology focusing on IT infrastructure, database management, network/system administration, and Azure cloud services. Skilled in problem-solving, managing dynamic environments, and proficient in multiple tech platforms and programming languages.</p>
         </section>
     </main>
-    <footer>
+</body>
+ <footer>
         <p>Copyright &copy; 2024 - Mohamed Riad Cherid</p>
     </footer>
-</body>
 </html>
