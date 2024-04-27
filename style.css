@@ -1,211 +1,99 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styling the entire body */
 body {
-  font-family: system-ui;
+  font-family: system-ui, sans-serif;
   background: white;
   color: black;
   text-align: center;
-  margin: 10; /* Ajouté pour éliminer la marge par défaut autour de la page */
-  padding-top: 50px; /* Ajouté pour éviter que le contenu soit caché derrière la barre de navigation fixe */
-}
-  
-h1, h2, h3, h4, h5, h6 {
-  font-family: system-ui;
+  margin: 0;
+  padding-top: 70px; /* Adjusted for fixed nav */
 }
 
+/* Header styles */
+header {
+  margin-bottom: 20px;
+}
+
+/* Navigation bar styling */
 nav {
   background-color: black;
   width: 100%;
-  position:fixed;
+  position: fixed;
   top: 0;
   z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
 }
 
 nav ul {
   list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex; /* Changé de 'overflow: hidden' pour utiliser flexbox */
-  justify-content: center; /* Centre les éléments de la liste horizontalement */
-  align-items: center; /* Centre les éléments de la liste verticalement */
+  display: flex;
+  align-items: center;
 }
 
 nav ul li {
-  /* 'float: left;' est retiré car nous utilisons flexbox maintenant */
+  margin: 0 20px;
 }
 
 nav ul li a {
-  display: block;
   color: white;
-  padding: 14px 16px;
   text-decoration: none;
+  padding: 10px 15px;
+  transition: background-color 0.3s;
 }
 
-nav ul li a:hover {
+nav ul li a:hover, nav ul li a:focus {
   background-color: #555;
 }
 
-/* Ajouter un padding-bottom au footer pour s'assurer que le contenu ne soit pas caché derrière */
+/* Main content and section styles */
+main {
+  padding: 20px;
+  margin: auto;
+  max-width: 960px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 10px;
+}
+
+ul {
+  text-align: left;
+  display: inline-block;
+}
+
+/* Footer styling */
 footer {
-  padding-bottom: 50px;
-}
-.header img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 50px;
-}
-
-
-body {
-  font-family: system-ui;
-  background: white;
-  color: black;
   text-align: center;
-  margin: 10; /* Ajouté pour éliminer la marge par défaut autour de la page */
-  padding-top: 50px; /* Ajouté pour éviter que le contenu soit caché derrière la barre de navigation fixe */
-}
-  
-
-
-nav {
-  display: flex;
-  justify-content: center;
-  background-color: black;
-  padding: 10px 0;
+  padding: 15px 0;
+  margin-top: 20px;
+  background-color: #f1f1f1;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  left: 0;
 }
 
-nav ul {
-  list-style-type: none;
-  display: flex;
-}
+/* Additional media queries for responsiveness */
+@media (max-width: 768px) {
+  nav ul {
+      flex-direction: column;
+  }
 
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  padding: 5px 10px;
-}
-
-nav ul li a:hover {
-  background-color: #555;
-}
-
-.contact-section, .contact-form {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #f4f4f4;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.contact-info p, .social-media h3 {
-  text-align: left;
-}
-
-.contact-form iframe {
-  border: none;
-}
-nav {
-  display: flex;
-  justify-content: center;
-  background-color: black;
-  padding: 10px 0;
-}
-
-nav ul {
-  list-style-type: none;
-  display: flex;
-}
-
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  padding: 5px 10px;
-}
-
-nav ul li a:hover {
-  background-color: #555;
-}
-
-.contact-section, .contact-form {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #f4f4f4;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.contact-info p, .social-media h3 {
-  text-align: left;
-}
-
-.contact-form iframe {
-  border: none;
-}
-body {
-  font-family: system-ui;
-  background: white;
-  color: black;
-  text-align: center;
-  margin: 10; /* Ajouté pour éliminer la marge par défaut autour de la page */
-  padding-top: 50px; /* Ajouté pour éviter que le contenu soit caché derrière la barre de navigation fixe */
-}
-  
-body {
-  font-family: system-ui;
-  background: white;
-  color: black;
-  text-align: center;
-  margin: 10; /* Ajouté pour éliminer la marge par défaut autour de la page */
-  padding-top: 50px; /* Ajouté pour éviter que le contenu soit caché derrière la barre de navigation fixe */
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  background-color: black;
-  padding: 10px 0;
-}
-
-nav ul {
-  list-style-type: none;
-  display: flex;
-}
-
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  padding: 5px 10px;
-}
-
-nav ul li a:hover {
-  background-color: #555;
-}
-
-.contact-section, .contact-form {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #f4f4f4;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.contact-info p, .social-media h3 {
-  text-align: left;
-}
-
-.contact-form iframe {
-  border: none;
+  nav ul li {
+      margin: 10px 0;
+  }
 }
