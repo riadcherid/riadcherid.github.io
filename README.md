@@ -20,6 +20,7 @@
     <header>
         <h1>Mohamed Riad Cherid</h1>
         <p>Network and Systems Engineer</p>
+        <img src="myimage1.jpg" alt="" style="max-width: 300px;">
     </header>
     <main>
         <section class="about-me">
