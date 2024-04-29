@@ -4,13 +4,11 @@ This repository contains an HTML project with different sections like Home, Abou
 
 ## Table of Contents
 
-- [Header](#header)
 - [Home](#home)
 - [About](#about)
 - [Projects](#projects)
 - [Achievements](#achievements)
 - [Contact](#contact)
-- [Footer](#footer)
 
 ## Header
 
