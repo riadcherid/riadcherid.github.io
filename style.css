@@ -39,7 +39,8 @@ nav ul li a {
   padding: 10px 15px;
 }
 
-nav ul li a:hover, nav ul li a:focus {
+nav ul li a:hover,
+nav ul li a:focus {
   background-color: #555;
 }
 
@@ -49,9 +50,13 @@ body {
   padding-top: 60px; /* Adjust padding to not overlap with fixed nav */
   background-color: #f9f9f9;
   color: #333;
+  background-image: url('path/to/your/image.jpg'); /* Add this line */
+  background-repeat: repeat; /* And this line */
 }
 
-header, main, footer {
+header,
+main,
+footer {
   text-align: center;
   padding: 20px;
 }
@@ -61,6 +66,7 @@ section {
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
 }
 
 footer {
@@ -71,4 +77,36 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
+}
+
+/* Additional styling for portfolio */
+.portfolio-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.portfolio-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.portfolio-item h3 {
+  margin-bottom: 5px;
+}
+
+.portfolio-item p {
+  color: #777;
+}
+
+.portfolio-item a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.portfolio-item a:hover {
+  color: #555;
 }
