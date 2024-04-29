@@ -28,16 +28,12 @@ This repository contains an HTML project with different sections like Home, Abou
 	<!--Header(start)-->
 	<table id="header" border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#4CAF50">
 		<tr>
-      <td>
 				<table border="0" cellpadding="15"
 					cellspacing="0" width="90%"
 					align="center">
 					<tr>
 						<td>
-							
-
-						</td>
-
+						
 						<td>
 							<font face="Comic sans MS" size="6">
 								<b>GeeksForGeeks</b>
