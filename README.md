@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -32,4 +32,4 @@
     <p>Copyright &copy; 2024 - Med Riad Cherid</p>
   </footer>
 </html>
-<link rel="stylesheet" href="style.css">
+
