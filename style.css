@@ -52,6 +52,9 @@ body {
   color: #333;
   background-image: url('path/to/your/image.jpg'); /* Add this line */
   background-repeat: repeat; /* And this line */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 header,
