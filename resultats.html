@@ -8,244 +8,710 @@
         </ul>
     </div>
 </nav>
+<!DOCTYPE html>
+<html lang="en">
 
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Track and Field Results</title>
-      <style>
-          body {
-              font-family: Arial, sans-serif;
-              margin: 20px;
-              background-color: #f4f4f4;
-              color: #333;
-          }
-          .container {
-              width: 80%;
-              margin: auto;
-              background: white;
-              padding: 20px;
-              box-shadow: 0 0 10px rgba(0,0,0,0.1);
-          }
-          h1 {
-              color: #0056b3;
-          }
-          table {
-              width: 100%;
-              border-collapse: collapse;
-          }
-          th, td {
-              padding: 8px;
-              text-align: left;
-              border-bottom: 1px solid #ddd;
-          }
-          th {
-              background-color: #f2f2f2;
-          }
-      </style>
-  </head>
-  <body>
-      <div class="container">
-          <h1>Track and Field Event Results</h1>
-          <table>
-              <tr>
-                  <th>Event</th>
-                  <th>Athlete</th>
-                  <th>Time/Result</th>
-                  <th>Club</th>
-              </tr>
-              <!-- Example Row -->
-              <tr>
-                  <td>100m</td>
-                  <td>Edward Lincoln</td>
-                  <td>10.68s</td>
-                  <td>Club Toronto</td>
-              </tr>
-              <!-- Add more rows here -->
-          </table>
-      </div>
-  </body>
-  </html>
-  <html>
 <head>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0">
+	<title>HTML Project</title>
 </head>
+
 <body>
-    <style>
-        body {
-        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-        background-color:#98002e;
-        color:#555;
-        }
-        
-        #container{
-            width:800px;
-            margin: auto;
-            background-color:#fff;
-            padding:10px
-        }
-        
-        h3{
-            color:#98002e;
-            padding:0;
-            margin:0;
-        }
-        h4{
-            text-transform:uppercase;
-            padding:0;
-            margin:0 0 10px 0;
-            color:#afa081;
-            font-weight:normal;
-            
-        }
-        h5{
-            font-weight:normal;
-            padding:2px;
-            margin:10px 0;
-            border-top: 1px solid #afa081;
-            border-bottom: 1px solid #afa081;
-            font-size:10px;
+	<!--Header(start)-->
+	<table id="header" border="0"
+		width="100%" cellpadding="0"
+		cellspacing="0" bgcolor="#4CAF50">
+		<tr>
+			<td>
+				<table border="0" cellpadding="15"
+					cellspacing="0" width="90%"
+					align="center">
+					<tr>
+						<td>
+							
 
-        }
-        h5 span{
-            margin: 0 40px 0 0;
-        }
-        table{
-            border-collapse:collapse;
-            width:100%
-        }
-        
-        th{
-            border-bottom:2px solid #afa081;
-            text-align:left;
-            font-size:12px;
-        }
-        
-        td{
-            border-bottom:1px solid #afa081;;
-            margin:0;
-            padding:4px 4px;
-            font-size:14px;
-        }
-        .place, .lane, .number, .laps{
-            text-align:center
-        }
-        
-        .time, .delta, .cum, .last{
-            text-align:right;
-        }
-        #clock{
-            float:right;
-            background-color:#ffd700;
-            font-size: 30px;
-            font-weight:bold;
-            font-family: "courier new";
-            text-align:center;
-            color: #000000;
-            padding: 5px 5px 3px 5px;
-            width:150px;
-        }
-    </style>
-    
-    <script>
-        var socket = io.connect();
+						</td>
 
-        socket.on('message', function(message){        
-            var obj = jQuery.parseJSON(message);
-            var htmlStr =''; 
-            
-            
-            // update page with event name
-            var eventName = obj[1][1];
-            $('#eventName').text(eventName);
+						<td>
+							<font face="Comic sans MS" size="6">
+								<b>GeeksForGeeks</b>
+							</font>
+						</td>
 
-            // update page with wind
-            var wind = obj[1][2];
-            $('#wind').text("Wind: " + wind);
-            
-            // update page with event number
-            var event = obj[1][3];
-            $('#event').text("Event: " + event);
-            
-            // update page with round number
-            var round = obj[1][4];
-            $('#round').text("Round: " + round);
-            
-            // update page with heat number
-            var heat = obj[1][5];
-            $('#heat').text("Heat: " + heat);
-            
-            // update page with participants
-            var participants = obj[1][8];
-            $('#participants').text("Participants: " + participants);
-            
-            // determine number of results to display upto 24
-            var displayNum = 24;
-            if(participants<24){
-                displayNum = participants;
-                displayNum++;
-            }
-            
-            //update clock
-            var clock = obj[0];
-            $('#clock').text(clock);
-            
-            // start building html for results table
-            htmlStr = htmlStr + '<table id="results">';
-            
-            // results table header
-            htmlStr = htmlStr + '<tr>'+
-                '<th class="place">Place</th>'+
-                '<th class="lane">Hip</th>'+
-                '<th class="number">#</th>'+
-                '<th class="name">Name</th>'+
-                '<th class="team">Team</th>'+
-                '<th class="time">Final</th>'+
-                '<th class="delta">Delta</th>'+
-                '<th class="cum">Cum</th>'+
-                '<th class="last">Last</th>'+
-                '<th class="laps">Laps</th></tr>';
-                     
-            for(var i=2;i<=displayNum;i++){ 
-                htmlStr = htmlStr + "<tr>";                
-                    htmlStr = htmlStr + '<td class="place">' + obj[i][0] + "</td>";
-                    htmlStr = htmlStr + '<td class="lane">' + obj[i][1] + "</td>";
-                    htmlStr = htmlStr + '<td class="number">' + obj[i][2] + "</td>";
-                    htmlStr = htmlStr + '<td class="name">' + obj[i][3] + "</td>";
-                    htmlStr = htmlStr + '<td class="team">' + obj[i][4] + "</td>";
-                    htmlStr = htmlStr + '<td class="time">' + obj[i][5] + "</td>";
-                    htmlStr = htmlStr + '<td class="delta">' + obj[i][6] + "</td>";
-                    htmlStr = htmlStr + '<td class="cum">' + obj[i][7] + "</td>";
-                    htmlStr = htmlStr + '<td class="last">' + obj[i][8] + "</td>";
-                    htmlStr = htmlStr + '<td class="laps">' + obj[i][9] + "</td>";
-                htmlStr = htmlStr + "</tr>";     
-            }
-            htmlStr = htmlStr + '<table>';
-            
-            // update page with generated table
-            $('#results').html(htmlStr);
-        });
-    </script>
-    <div id="container">
-        <div id="clock">00:00.00</div>
-        <h4 id="venue"> toronto | toronto University | on, canada</h4>
-        <h3 id="eventName">No Event Selected</h3>
-        <h5 id="details">
-            <span id="event">Event: 0</span>
-            <span id="round">Round: 0</span>
-            <span id="heat">Heat: 0</span>
-            <span id="wind"></span>
-            <span id="participants">Participants: 0</span>
-        </h5>
-        
-        <div id="results"></div>
-        <div id="test"></div>
-    </div>
+						<td width="15%">
+							
+						</td>
+
+						<td>
+							<a href="#home"
+							style="text-decoration:none">
+								<font face="Verdana"
+									size="5" color=black>
+									Home
+								</font>
+							</a>
+						</td>
+
+						<td>
+							|
+						</td>
+
+						<td>
+							<a href="#about"
+							style="text-decoration:none">
+								<font face="Verdana"
+									size="5" color=black>
+									About
+								</font>
+							</a>
+						</td>
+
+						<td>
+							|
+						</td>
+
+						<td>
+							<a href="#projects"
+							style="text-decoration:none">
+								<font face="Verdana"
+									size="5" color=black>
+									Projects
+								</font>
+							</a>
+						</td>
+
+						<td>
+							|
+						</td>
+
+						<td>
+							<a href="#achievements"
+							style="text-decoration:none">
+								<font face="Verdana"
+									size="5" color=black>
+									Achievements
+								</font>
+							</a>
+						</td>
+
+						<td>
+							|
+						</td>
+
+						<td>
+							<a href="#contact"
+							style="text-decoration:none">
+								<font face="Verdana"
+									size="5" color=black>
+									Contact
+								</font>
+							</a>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<!--Header(end)-->
+
+	<!--Home(start)-->
+	<table id="home" border="1" width="100%"
+		cellpadding="20" cellspacing="0" bgcolor="black">
+		<tr>
+			<td>
+				<table border="0" cellpadding="15"
+					cellspacing="0" width="90%" align="center">
+					<tr>
+						<td align="center" valign="middle">
+							<h3>
+								<font face="Times New Roman"
+									size="6" color="#ffffff">
+									Hi Geeks!
+								</font>
+							</h3>
+
+							<h2>
+								<font face="Verdana" size="6"
+									color="#4CAF50">
+									<!-- Freelance Programmer -->
+								</font>
+							</h2>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<!--Home(end)-->
+
+
+	<!--About(start)-->
+	<table id="about" border="0" width="100%"
+		cellpadding="0" cellspacing="0" bgcolor="black">
+		<tr>
+			<td>
+				<table border="0" cellpadding="15"
+					cellspacing="0" width="80%" align="center">
+					<tr>
+						<td height="180" align="center"
+							valign="middle" colspan="2">
+							<font face="Verdana" size="7"
+								color="#4CAF50">
+								About Me
+							</font>
+							<hr color="#4CAF50" width="90">
+						</td>
+					</tr>
+
+					<tr>
+						<td width="40%">
+							<img src="img.png">
+						</td>
+
+						<td width="60%">
+							<font face="Verdana" size="4"
+								color="white">
+								Thanks for your interest, here 
+								is a quick story of me and this 
+								website.
+								<hr color="black">
+								Sandeep Jain An IIT Roorkee alumnus 
+								and founder of GeeksforGeeks. He 
+								loves to solve programming problems 
+								in most efficient ways. Apart from 
+								GeeksforGeeks, he has worked with 
+								DE Shaw and Co. as a software 
+								developer and JIIT Noida as an 
+								assistant professor.
+								<hr color="black">
+
+								I do my work mainly in C-Language, 
+								C++ and JAVA. C++ and Data Structure
+								and Algorithm are my stronger section.
+								Besides these I know Web Development,
+								LINUX and database as well.
+								<hr color="black">
+
+								This website is basically one of my 
+								Web Development project which is 
+								built using HTML only.
+								Here one can also find ideas for 
+								projects in different languages.
+
+								Thanks again for reading this, 
+								because of people like you, it 
+								exists and prospers!
+								<hr color="black">
+								Cheers,
+								<br>
+								<b>GeeksForGeeks.</b>
+							</font>
+						</td>
+					</tr>
+				</table>
+				<hr color="black">
+				<hr color="black">
+				<hr color="black">
+			</td>
+		</tr>
+	</table>
+	<!--About(end)-->
+
+
+	<!--Projects(start)-->
+	<table id="projects" border="0" width="100%"
+		cellpadding="0" cellspacing="0" bgcolor="#c2c0c3">
+		<tr>
+			<td>
+				<table border="0" cellpadding="15"
+					cellspacing="0" width="80%" align="center">
+					<tr>
+						<td height="180" align="center"
+							valign="middle" colspan="2">
+							<font face="Verdana" size="7"
+								color="black">
+								Projects
+							</font>
+							<hr color="black" width="90">
+						</td>
+					</tr>
+
+					<tr>
+						<td height="10">
+							<font face="Times New Roman"
+								size="5" color="black">
+								<ul>
+									<li>
+										BMI Calculator
+										<a href="#"
+										style="text-decoration:none">
+											 ➲
+										</a>
+									</li>
+
+									<li>
+										<hr color="#c2c0c3">
+										Calculator
+										<a href="#"
+										style="text-decoration:none"
+											color="#c2c0c3">
+											 ➲
+										</a>
+									</li>
+
+									<li>
+										<hr color="#c2c0c3">
+										Calendar
+										<a href="#"
+										style="text-decoration:none">
+											 ➲
+										</a>
+									</li>
+
+									<li>
+										<hr color="#c2c0c3">
+										ChatBot
+										<a href="#"
+										style="text-decoration:none">
+											 ➲
+										</a>
+									</li>
+
+									<li>
+										<hr color="#c2c0c3">
+										Contact Saver
+										<a href="#"
+										style="text-decoration:none">
+											 ➲
+										</a>
+									</li>
+
+									<li>
+										<hr color="#c2c0c3">
+										Daily Quiz
+										<a href="#"
+										style="text-decoration:none">
+											 ➲
+										</a>
+									</li>
+
+									<li>
+										<hr color="#c2c0c3">
+										Emplyoyee Record System
+										<a href="#"
+										style="text-decoration:none">
+											 ➲
+										</a>
+									</li>
+
+									<li>
+										<hr color="#c2c0c3">
+										Guess the Number-Game
+										<a href="#"
+										style="text-decoration:none">
+											 ➲
+										</a>
+									</li>
+
+									<li>
+										<hr color="#c2c0c3">
+										Random Password Generator
+										<a href="#"
+										style="text-decoration:none">
+											➲
+										</a>
+									</li>
+
+									<li>
+										<hr color="#c2c0c3">
+										Stone Paper Scissor
+										<a href="#"
+										style="text-decoration:none">
+											➲
+										</a>
+									</li>
+
+									<li>
+										<hr color="#c2c0c3">
+										Tic Tac Toe
+										<a href="#"
+										style="text-decoration:none">
+											➲
+										</a>
+									</li>
+
+									<li>
+										<hr color="#c2c0c3">
+										Tic Tac Toe(GUI)
+										<a href="#"
+										style="text-decoration:none">
+											➲
+										</a>
+									</li>
+
+									<li>
+										<hr color="#c2c0c3">
+										ToDo App
+										<a href="#"
+										style="text-decoration:none">
+											➲ </a>
+									</li>
+
+									<li>
+										<hr color="#c2c0c3">
+										Travel Management System
+										<a href="#" style=
+											"text-decoration:none"> ➲
+										</a>
+									</li>
+								</ul>
+								<hr color="#c2c0c3">
+								<hr color="#c2c0c3">
+								<hr color="#c2c0c3">
+								<hr color="#c2c0c3">
+							</font>
+						</td>
+
+						<td width="45%">
+							<img src="img.png"
+								alt="Project" width="75%">
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<!--Projects(end)-->
+
+	<!--Achievement(start)-->
+	<table id="achievements" border="0" width="100%"
+		cellpadding="0" cellspacing="0" bgcolor="black">
+		<tr>
+			<td>
+				<table border="0" cellpadding="15"
+					cellspacing="0" width="80%" align="center">
+					<tr>
+						<td height="180" align="center" valign="middle">
+							<font face="Verdana" size="7" color="#4CAF50">
+								Achievements
+								<hr color="#4CAF50" width="100">
+							</font>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<font face="Verdana" size="4" color="white">
+								<ul>
+									<li>
+										<b>Intern at GeeksforGeeks.</b>
+										<ul>
+											<li>
+												December,2020 - Present.
+											</li>
+											<li>
+												Write technical articles 
+												on programming related topics.
+											</li>
+										</ul>
+									</li>
+
+									<li>
+										<hr color="black">
+										<hr color="black">
+										<hr color="black">
+										<b>Microsoft Learn Student Ambassador.</b>
+										<ul>
+											<li>
+												August,2020 - Present.
+											</li>
+											<li>
+												Conducted events and workshops on
+												different technologies.
+											</li>
+										</ul>
+									</li>
+
+									<li>
+										<hr color="black">
+										<hr color="black">
+										<hr color="black">
+										<b>Mentored HackTX.</b>
+										<ul>
+											<li>
+												October,2020.
+											</li>
+											<li>
+												Selected from Microsoft as Student
+												ambassador where I mentored students
+												in their projects.
+											</li>
+											<hr color="black">
+											<hr color="black">
+											<hr color="black">
+											<hr color="black">
+											<hr color="black">
+										</ul>
+									</li>
+
+								</ul>
+
+							</font>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<!--Achievement(end)-->
+
+
+	<!--Contact(start)-->
+	<table id="contact" border="0" width="100%"
+		cellpadding="0" cellspacing="0" bgcolor="#c2c0c3">
+		<tr>
+			<td>
+				<table border="0" cellpadding="15"
+					cellspacing="0" width="80%" align="center">
+					<tr>
+						<td height="180" align="center"
+							valign="middle" colspan="2">
+							<font face="Verdana" size="7"
+								color="black">
+								Contact
+							</font>
+							<hr color="black" width="90">
+						</td>
+					</tr>
+
+					<tr>
+						<td align="center" valign="top">
+							<table border="0" width="50%" cellpadding="15"
+								cellspacing="0" align="center" bgcolor="black">
+								<tr>
+									<td width="30%">
+										<hr color="black">
+										<font face="Verdana" size="4"
+											color="#ffffff">
+											Name
+										</font>
+									</td>
+									<td width="70%">
+										<font face="Verdana" size="4"
+											color="#ffffff">
+											<input type="text" size="40">
+										</font>
+									</td>
+								</tr>
+								<tr>
+									<td width="30%">
+										<font face="Verdana" size="4"
+											color="#ffffff">
+											Email
+										</font>
+									</td>
+									<td width="70%">
+										<font face="Verdana" size="4"
+											color="#ffffff">
+											<input type="email" size="40">
+										</font>
+									</td>
+								</tr>
+								<tr>
+									<td width="30%">
+										<font face="Verdana" size="4"
+											color="#ffffff">
+											Number
+										</font>
+									</td>
+									<td width="70%">
+										<font face="Verdana" size="4"
+											color="#ffffff">
+											<input type="number" size="12">
+										</font>
+									</td>
+								</tr>
+								<tr>
+									<td width="30%">
+										<font face="Verdana" size="4"
+											color="#ffffff">
+											Message
+										</font>
+									</td>
+									<td width="70%">
+										<font face="Verdana" size="4"
+											color="#ffffff">
+											<textarea rows="5"
+												cols="37">
+											</textarea>
+										</font>
+									</td>
+								</tr>
+								<tr>
+									<td width="30%">
+										
+									</td>
+									<td width="70%">
+										<button type="Submit">
+											<font face="Verdana"
+												size="4" color="black">
+												<b>Submit</b>
+											</font>
+										</button>
+										<hr color="black">
+										<hr color="black">
+									</td>
+								</tr>
+							</table>
+						</td>
+
+					</tr>
+					<tr>
+						<td colspan="2">
+							
+							
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<!--Contact(end)-->
+
+
+	<!--Footer1(start)-->
+	<table id="footer" border="0" width="100%"
+		cellpadding="0" cellspacing="0" bgcolor="#4CAF50">
+		<tr>
+			<td>
+				<table border="0" cellpadding="15"
+					cellspacing="0" width="90%" align="center">
+					<tr>
+						<td width="13%" valign="top">
+							<b>LinkedIn</b>
+							<a href="#" style="text-decoration:none">
+								➲
+							</a>
+						</td>
+
+						<td>
+							|
+						</td>
+
+						<td width="13%" valign="top">
+							<b>GitHub</b>
+							<a href="#" style="text-decoration:none">
+								➲ 
+							</a>
+						</td>
+
+						<td>
+							|
+						</td>
+
+						<td width="13%" valign="top">
+							<b>HackerRank</b>
+							<a href="#" style="text-decoration:none">
+								➲
+							</a>
+						</td>
+
+						<td>
+							|
+						</td>
+
+						<td width="13%" valign="top">
+							<b>GeeksforGeeks</b>
+							<a href="#" style="text-decoration:none">
+								➲
+							</a>
+						</td>
+
+						<td>
+							|
+						</td>
+
+						<td width="13%" valign="top">
+							<b>Twitter</b>
+							<a href="#" style="text-decoration:none">
+								➲
+							</a>
+						</td>
+
+						<td>
+							|
+						</td>
+
+						<td width="13%" valign="top">
+							<b>Instagram</b>
+							<a href="#" style="text-decoration:none">
+								➲
+							</a>
+						</td>
+
+						<td>
+							|
+						</td>
+
+						<td width="13%" valign="top">
+							<b>Email</b>
+							<a href="#" style="text-decoration:none">
+								➲
+							</a>
+						</td>
+
+						<td>
+							|
+						</td>
+
+						<td width="13%" valign="top">
+							<b>Website</b>
+							<a href="#" style="text-decoration:none">
+								➲
+							</a>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<!--Footer1(end)-->
+
+
+	<!--Footer2(start)-->
+	<table id="footer" border="0" width="100%"
+		cellpadding="0" cellspacing="0" bgcolor="black">
+		<tr>
+			<td>
+				<table border="0" cellpadding="15"
+					cellspacing="0" width="90%" align="center">
+					<tr>
+						<td width="80%" valign="top">
+							<font face="Verdana"
+								color="#4CAF50" size="5">
+								©Copyright 2050 by nobody. 
+								All rights reserved.
+							</font>
+						</td>
+
+						<td width="10%">
+							<font face="arial" color="black" size="5">
+								<a href="#header" style="text-decoration:none">
+									<font face="Verdana" color="#4CAF50" size="6">
+										<b>TOP</b>
+									</font>
+								</a>
+							</font>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<!--Footer2(end)-->
+
 </body>
+
 </html>
-<head>
-    <link rel="stylesheet" href="style.css">
-  </head>
