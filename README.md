@@ -20,7 +20,8 @@
 					align="center">
 					<tr>
 						<td>
-            
+							
+
 						</td>
 
 						<td>
@@ -562,6 +563,19 @@
 							
 							
 						</td>
+ website.
+              <hr color="black">
+              You can add your contact information,
+              social media links, or any other relevant
+              details here.
+            </font>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!--Footer(end)-->
 					</tr>
 				</table>
 			</td>
