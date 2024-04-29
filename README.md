@@ -1,160 +1,200 @@
-# HTML Project
+  HTML Project
 
-This repository contains an HTML project with different sections like Home, About, Projects, Achievements, and Contact.
+**GeeksForGeeks**
 
-## Table of Contents
+[Home](#home)
 
-- [Home](#home)
-- [About](#about)
-- [Projects](#projects)
-- [Achievements](#achievements)
-- [Contact](#contact)
+|
 
-## Header
+[About](#about)
 
-```html
-<!DOCTYPE html>
-<html lang="en">
+|
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>HTML Project</title>
-</head>
+[Projects](#projects)
 
-<body>
-	<!--Header(start)-->
-	<table id="header" border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#4CAF50">
-		<tr>
-				<table border="0" cellpadding="15"
-					cellspacing="0" width="90%"
-					align="center">
-					<tr>
-						<td>
-						
-						<td>
-							<font face="Comic sans MS" size="6">
-								<b>GeeksForGeeks</b>
-							</font>
-						</td>
+|
 
-						<td width="15%">
-							
-						</td>
+[Achievements](#achievements)
 
-						<td>
-							<a href="#home"
-							style="text-decoration:none">
-								<font face="Verdana"
-									size="5" color=black>
-									Home
-								</font>
-							</a>
-						</td>
+|
 
-						<td>
-							|
-						</td>
+[Contact](#contact)
 
-						<td>
-							<a href="#about"
-							style="text-decoration:none">
-								<font face="Verdana"
-									size="5" color=black>
-									About
-								</font>
-							</a>
-						</td>
+### Hi Geeks!
 
-						<td>
-							|
-						</td>
+About Me
 
-						<td>
-							<a href="#projects"
-							style="text-decoration:none">
-								<font face="Verdana"
-									size="5" color=black>
-									Projects
-								</font>
-							</a>
-						</td>
+* * *
 
-						<td>
-							|
-						</td>
+![](img.png)
 
-						<td>
-							<a href="#achievements"
-							style="text-decoration:none">
-								<font face="Verdana"
-									size="5" color=black>
-									Achievements
-								</font>
-							</a>
-						</td>
+Thanks for your interest, here is a quick story of me and this website.
 
-						<td>
-							|
-						</td>
+* * *
 
-						<td>
-							<a href="#contact"
-							style="text-decoration:none">
-								<font face="Verdana"
-									size="5" color=black>
-									Contact
-								</font>
-							</a>
-						</td>
-					</tr>
-				</table>
-			</td>
-		</tr>
-	</table>
-	<!--Header(end)-->
-</body>
+Sandeep Jain An IIT Roorkee alumnus and founder of GeeksforGeeks. He loves to solve programming problems in most efficient ways. Apart from GeeksforGeeks, he has worked with DE Shaw and Co. as a software developer and JIIT Noida as an assistant professor.
 
-</html>
-<!--Home(start)-->
-<table id="home" border="1" width="100%" cellpadding="20" cellspacing="0" bgcolor="black">
-	<tr>
-		<!-- Home code here -->
-	</tr>
-</table>
-<!--Home(end)-->
-<!--About(start)-->
-<table id="about" border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="black">
-	<tr>
-		<!-- About code here -->
-	</tr>
-</table>
-<!--About(end)-->
-<!--Projects(start)-->
-<table id="projects" border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#c2c0c3">
-	<tr>
-		<!-- Projects code here -->
-	</tr>
-</table>
-<!--Projects(end)-->
-<!--Achievement(start)-->
-<table id="achievements" border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="black">
-	<tr>
-		<!-- Achievements code here -->
-	</tr>
-</table>
-<!--Achievement(end)-->
-<!--Contact(start)-->
-<table id="contact" border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#c2c0c3">
-	<tr>
-		<!-- Contact code here -->
-	</tr>
-</table>
-<!--Contact(end)-->
-<!--Footer1(start)-->
-<table id="footer" border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#4CAF50">
-	<tr>
-		<!-- Footer code here -->
-	</tr>
-</table>
-<!--Footer1(end)-->
+* * *
+
+I do my work mainly in C-Language, C++ and JAVA. C++ and Data Structure and Algorithm are my stronger section. Besides these I know Web Development, LINUX and database as well.
+
+* * *
+
+This website is basically one of my Web Development project which is built using HTML only. Here one can also find ideas for projects in different languages. Thanks again for reading this, because of people like you, it exists and prospers!
+
+* * *
+
+Cheers,  
+**GeeksForGeeks.**
+
+* * *
+
+* * *
+
+* * *
+
+Projects
+
+* * *
+
+*   BMI Calculator [➲](#)
+*   * * *
+    
+    Calculator [➲](#)
+*   * * *
+    
+    Calendar [➲](#)
+*   * * *
+    
+    ChatBot [➲](#)
+*   * * *
+    
+    Contact Saver [➲](#)
+*   * * *
+    
+    Daily Quiz [➲](#)
+*   * * *
+    
+    Emplyoyee Record System [➲](#)
+*   * * *
+    
+    Guess the Number-Game [➲](#)
+*   * * *
+    
+    Random Password Generator [➲](#)
+*   * * *
+    
+    Stone Paper Scissor [➲](#)
+*   * * *
+    
+    Tic Tac Toe [➲](#)
+*   * * *
+    
+    Tic Tac Toe(GUI) [➲](#)
+*   * * *
+    
+    ToDo App [➲](#)
+*   * * *
+    
+    Travel Management System [➲](#)
+
+* * *
+
+* * *
+
+* * *
+
+* * *
+
+![Project](img.png)
+
+Achievements
+
+* * *
+
+*   **Intern at GeeksforGeeks.**
+    *   December,2020 - Present.
+    *   Write technical articles on programming related topics.
+*   * * *
+    
+    * * *
+    
+    * * *
+    
+    **Microsoft Learn Student Ambassador.**
+    *   August,2020 - Present.
+    *   Conducted events and workshops on different technologies.
+*   * * *
+    
+    * * *
+    
+    * * *
+    
+    **Mentored HackTX.**
+    *   October,2020.
+    *   Selected from Microsoft as Student ambassador where I mentored students in their projects.
+    
+    * * *
+    
+    * * *
+    
+    * * *
+    
+    * * *
+    
+    * * *
+    
+
+Contact
+
+* * *
+
+* * *
+
+Name
+
+Email
+
+Number
+
+Message
+
+**Submit**
+
+* * *
+
+* * *
+
+**LinkedIn** [➲](#)
+
+|
+
+**GitHub** [➲](#)
+
+|
+
+**HackerRank** [➲](#)
+
+|
+
+**GeeksforGeeks** [➲](#)
+
+|
+
+**Twitter** [➲](#)
+
+|
+
+**Instagram** [➲](#)
+
+|
+
+**Email** [➲](#)
+
+|
+
+**Website** [➲](#)
+
+©Copyright 2050 by nobody. All rights reserved.
+
+[**TOP**](#header)
