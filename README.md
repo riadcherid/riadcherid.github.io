@@ -11,7 +11,6 @@
         <div class="nav-container">
             <ul>
                 <li><a href="home.html">home</a></li>
-               
             </ul>
         </div>
     </nav>
