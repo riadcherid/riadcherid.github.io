@@ -11,6 +11,7 @@
         <div class="nav-container">
             <ul>
                 <li><a href="index.html">home</a></li>
+              	<li><a href="README.md">about us</a></li>
             </ul>
         </div>
     </nav>
